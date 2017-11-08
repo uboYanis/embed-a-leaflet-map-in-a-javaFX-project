@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display Leaflet map</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/freeStyle.css">
+	<script src="js/Leaflet.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div id="map">
+		<script type="text/javascript">
+
+			var map=L.map('map',{
+				center: [5,28],
+				zoom:3,
+				minZoom:2,
+				maxZoom:18
+			});
+
+
+
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href=”http://osm.org/copyright”>OpenStreetMap</a> contributors'
+			}).addTo(map);
+
+			var myIcon = L.icon({
+				iconUrl: 'img/placeholder.png'
+			});
+
+			var arr= [];
+
+			document.add= function(param){
+				arr.push(param);
+			}
+
+			function drawFeature(feature,layer){
+	//layer.bindPopup("<p>"+feature.properties.color+"</p>"); // pour google
+	//layer.setIcon(myIcon)
+
+};
+
+var lay1;
+
+var lay2;
+
+function initLayer1(input_geo_json){
+	lay1=L.geoJSON(input_geo_json, {
+		onEachFeature : drawFeature
+	});
+}
+
+function initLayer2(output_geo_json){
+	lay2=L.geoJSON(output_geo_json, {
+		onEachFeature : drawFeature
+	});
+}
+
+function addLayer1(){
+	lay1.addTo(map);
+}
+
+function addLayer2(){
+	lay2.addTo(map);
+}
+
+function removeLayer1(){
+	map.removeLayer(lay1);
+}
+
+function removeLayer2(){
+	map.removeLayer(lay2);
+}
+
+function updateCenter(lat,lon){
+	map.panTo(new L.LatLng(lat, lon));
+}
+function updateCenter(lat,lon,zoom){
+	map.panTo(new L.LatLng(lat, lon));
+	map.setZoom(zoom);
+}
+
+
+</script>
+</div>
+
+<script src="js/jq.js" type="text/javascript"></script>
+
+
+</body>
+</html>
