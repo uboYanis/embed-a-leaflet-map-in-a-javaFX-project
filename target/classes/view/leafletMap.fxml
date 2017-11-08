@@ -12,8 +12,8 @@
         <items>
           <AnchorPane fx:id="inputJson" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="input" layoutY="1.0" mnemonicParsing="false" onAction="#inputGeoJson" prefHeight="39.0" prefWidth="132.0" text="Show input GeoJson" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
-                  <Button fx:id="output" layoutY="43.0" mnemonicParsing="false" onAction="#outputGeoJson" prefHeight="39.0" prefWidth="132.0" text="Show output GeoJson" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                  <Button fx:id="input" layoutY="1.0" mnemonicParsing="false" onAction="#inputGeoJson" prefHeight="39.0" prefWidth="132.0" text="Show GeoJson1" AnchorPane.bottomAnchor="447.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+                  <Button fx:id="output" layoutY="43.0" mnemonicParsing="false" onAction="#outputGeoJson" prefHeight="39.0" prefWidth="132.0" text="Show GeoJson2" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
                   <Separator layoutY="77.0" prefHeight="21.0" prefWidth="135.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0" />
                </children>
             </AnchorPane>

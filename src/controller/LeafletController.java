@@ -85,11 +85,11 @@ public class LeafletController implements Initializable {
 	private void inputGeoJson(ActionEvent e) {
 		if (stateInputGeoJson == SHOW_INPUT_GEOJSON) {
 			showInputGeoJson(inputGeoJson);
-			input.setText("Hidden input GeoJson");
+			input.setText("Hidden GeoJson1");
 			stateInputGeoJson = HIDDEN_INPUT_GEOJSON;
 		} else if (stateInputGeoJson == HIDDEN_INPUT_GEOJSON) {
 			hiddenInputGeoJson();
-			input.setText("Show input GeoJson");
+			input.setText("Show GeoJson1");
 			stateInputGeoJson = SHOW_INPUT_GEOJSON;
 		}
 	}
@@ -98,11 +98,11 @@ public class LeafletController implements Initializable {
 	private void outputGeoJson(ActionEvent e) {
 		if (stateOutputGeoJson == SHOW_OUTPUT_GEOJSON) {
 			shwoOutputGeoJson(outputGeoJson);
-			output.setText("Hidden output GeoJson");
+			output.setText("Hidden GeoJson2");
 			stateOutputGeoJson = HIDDEN_OUTPUT_GEOJSON;
 		} else if (stateOutputGeoJson == HIDDEN_OUTPUT_GEOJSON) {
 			hiddenOutputGeoJson();
-			output.setText("Show output GeoJson");
+			output.setText("Show GeoJson2");
 			stateOutputGeoJson = SHOW_OUTPUT_GEOJSON;
 		}
 	}
